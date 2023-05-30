@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+  background: linear-gradient(hsl(14, 88%, 65%), hsl(238, 29%, 16%));
+  height: 100vh;
+
+}
+
+.container {
+    width: min(90%,350px);
+    max-height: 600px;
+    margin: 150px auto;
+    background-color: white;
+    border-radius: 20px;
+
+}
+
+.image_container {
+    height: 100px;
+    width: 100%;
+    
+    position: relative;
+}
+
+
+
+.women_mobile {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: -120px;
+    left: 30px;
+}
+
+.shadow_mobile {
+    position: absolute;
+    width: 200px;
+    top: -10px;
+    left: 40px;
+}
+
+.women_pc,.shadow_pc {
+    display: none;
+}
+
+
+.faq_container {
+    height: 100%;
+    
+    padding: 20px;
+}
+
+.faq_title{
+    text-align: center;
+    font-family: 'Kumbh Sans', sans-serif;
+    margin: 10px auto;
+}
+
+.faq_questions_containers {
+/*      */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Kumbh Sans', sans-serif;
+    cursor: pointer;
+    font-size: 0.95rem;
+    padding: 5px 10px
+}
+
+.faqs {
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.846);
+    user-select: none;
+}
+
+.faqs:hover {
+    color: orange;
+}
+
+
+.drop_down_arrow1,.drop_down_arrow2,.drop_down_arrow3,.drop_down_arrow4,.drop_down_arrow5 {
+    background-image: url("images/icon-arrow-down.svg");
+    height: 10px;
+    width: 15px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+}
+
+.drop_down_arrow1.rotate,.drop_down_arrow2.rotate,.drop_down_arrow3.rotate,.drop_down_arrow4.rotate,.drop_down_arrow5.rotate {
+    transform: rotateX(180deg);
+}
+
+.answer_container1,.answer_container2,.answer_container3,.answer_container4,.answer_container5 {
+    font-size: 12px;
+    font-family: 'Kumbh Sans', sans-serif;
+    padding: 5px 13px;
+    width: 95%;
+    color: rgba(0, 0, 0, 0.541);
+    display: none;
+}
+
+@keyframes containershow {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+.answers {
+        display: none;
+    }
+
+.answers.reveal {
+    display: block;
+    animation: containershow 0.5s ease-in-out normal;
+}
+
+
+.question_underline {
+    width: 91%;
+    margin: 10px auto;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.box_pc {
+    display: none;
+}
+
+
+
+@media (min-width:900px) {
+    
+    .container {
+        
+        display: flex;
+        width: min(90%,900px);
+        height: 400px;
+    }
+
+    .image_container {
+        height: 100%;
+        width: 50%;
+        overflow: hidden;   
+    }
+
+    .faq_container {
+        width: 50%;
+    }
+
+    .faq_title {
+        text-align: left;
+        padding: 5px 10px;
+    }
+
+    .faq_questions_container {
+        padding-right: 60px;
+    }
+
+    .women_mobile,.shadow_mobile {
+        display: none;
+    }
+
+
+    .women_pc {
+        position: absolute;
+        height: 280px;
+        width: 400px;
+        top: 80px;
+        left: -50px;
+        display: block;
+        overflow: hidden;
+    
+    }
+    
+    .shadow_pc {
+        position: absolute;
+        height: 320px;
+        width: 400px;
+        top: 80px;
+        left: -50px;
+        display: block;
+    }
+
+
+    .box_container{
+/*         border: 2px solid aqua; */
+        width: 220px;
+        height: 220px;
+        position: absolute;
+    }
+
+    .box_pc {
+        position: absolute;
+        height: 210px;
+        width: 220px;
+        top: 150px;
+        left: -105px;
+        display: block;
+        z-index: 4;
+        animation: boxHop 2s ease-in-out infinite;
+    }
+
+    @keyframes boxHop {
+        0% {
+        top: 150px;
+        }
+
+        50% {
+          transform: translateY(-5%);
+        }
+
+        100% {
+            top: 150px;
+        }
+      }
+
+}
+
+.attribution {
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 50px 0 10px 0;
+    color: white;
+
+}
+.attribution > a {
+    text-decoration: none;
+}
+
+.frontendmentor {
+    color: rgb(212, 0, 124);
+}
+
+.author {
+    color: rgb(212, 0, 124);
+}
+
